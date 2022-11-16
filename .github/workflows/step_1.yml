@@ -11,6 +11,7 @@ permissions: read-all
 jobs:
   new-job:
     name: new job
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name : Checkout
