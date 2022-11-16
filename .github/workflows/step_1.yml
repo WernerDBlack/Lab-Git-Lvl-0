@@ -12,15 +12,22 @@ jobs:
   new-job:
     name: new job
     permissions: write-all
+    permissions: read-all
     runs-on: ubuntu-latest
     steps:
-      - name : Checkout
+      - name: Checkout
         uses: actions/checkout@v3
-      - name : Setup Env
+      - name: Test of the code
+        - uses: actions/setup-python@v4
+            with:
+              python-version: '3.10' 
+        - run: python add.py
+      - name: Create Sucess Issue
         uses: ManojCSE17/open-issue@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: New Issue
+          title: Vous avez Reuissi le Step 1
+          body: Félicitation! vous avez reuissi votre premier push complet sur le repository
 
 
         
