@@ -9,7 +9,7 @@ on :
 
 jobs:
   new-job:
-    permissions: read-all|write-all
+    permissions: write-all
     name: new job
     runs-on: ubuntu-latest
     steps:
