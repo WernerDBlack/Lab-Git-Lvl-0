@@ -5,11 +5,11 @@ on :
   push: 
     branches: 
       - main
+permissions: write-all|read-all
 
 
 jobs:
   new-job:
-    permissions: write-all|read-all
     name: new job
     runs-on: ubuntu-latest
     steps:
