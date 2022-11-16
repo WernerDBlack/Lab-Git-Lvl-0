@@ -6,12 +6,11 @@ on :
     branches: 
       - main
 
-permissions: read-all
 
 jobs:
   new-job:
-    name: new job
     permissions: write-all|read-all
+    name: new job
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
