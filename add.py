@@ -3,9 +3,10 @@ def add():
     x = int(sys.argv[1])
     y = int(sys.argv[2])
 
-    print(x-y)
+    return x-y
 
-add()
+def test_answer():
+    assert add() == 2
 
 
 
