@@ -19,7 +19,7 @@ jobs:
       #  uses: pavelzw/pytest-action@v2.0.0
       #  with:
       #    custom-arguments: 3 1
-      - name: Create Sucess Issue
+      - name: Create Success Issue
         uses: ManojCSE17/open-issue@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
