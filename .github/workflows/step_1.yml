@@ -24,7 +24,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: Vous avez Réussi le Step 1
-          body: Félicitation! vous avez réussi votre premier push complet sur le repository
+          body: Félicitation ! vous avez réussi votre premier push complet sur le repository
 
 
         
