@@ -16,15 +16,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Test of the code
-        uses: xoviat/actions-pytest@0.1-alpha2
+        uses: pavelzw/pytest-action@v2.0.0
         with:
-          args: 3 1
+          custom-arguments: 3 1
       - name: Create Sucess Issue
         uses: ManojCSE17/open-issue@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: Vous avez Reuissi le Step 1
-          body: Félicitation! vous avez reuissi votre premier push complet sur le repository
+          title: Vous avez Réussi le Step 1
+          body: Félicitation! vous avez réussi votre premier push complet sur le repository
 
 
         
