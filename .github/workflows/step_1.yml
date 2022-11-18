@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Node
         uses: actions/setup-node@v1
+      - run: npm ci
       - name: Run test
         uses: jlndk/github-action-jest@1.0.3
       - name: Create Success Issue
