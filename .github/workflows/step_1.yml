@@ -23,7 +23,9 @@ jobs:
           node-version: 16
       - run: npm ci
       - name: Run test
-        uses: jlndk/github-action-jest@1.0.3
+        uses: willcaul/jest-github-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Success Issue
         uses: ManojCSE17/open-issue@v1.0.0
         with:
