@@ -20,8 +20,6 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
       - run: npm ci
-      - run: npm run prettier
-      - run: npm run linter
       - run: npm test
       - name: Create Success Issue
         uses: ManojCSE17/open-issue@v1.0.0
