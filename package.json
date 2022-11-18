@@ -1,0 +1,22 @@
+{
+  "name": "lab-git-lvl-0",
+  "version": "1.0.0",
+  "description": "Ceci est l'archive de base pour le Lab Git de niveau 0 de la Fabrica.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabricaLabDev/Lab-Git-Lvl-0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabricaLabDev/Lab-Git-Lvl-0/issues"
+  },
+  "homepage": "https://github.com/FabricaLabDev/Lab-Git-Lvl-0#readme",
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
+}
