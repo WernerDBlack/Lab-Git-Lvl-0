@@ -1,0 +1,39 @@
+name : "Step 2"
+
+on :
+  workflow_dispatch:
+  push: 
+    branches-ignore: 
+      - main
+
+
+jobs:
+  new-job:
+    permissions: write-all
+    name: new job
+    runs-on: ubuntu-latest
+      # node-version:14.x
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - run: npm ci
+      - name: Run test
+        uses: willcaul/jest-github-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Success Issue
+        uses: ManojCSE17/open-issue@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Vous avez Réussi le Step 2
+          body: Félicitation ! Vous avez crée votre première branche 
+    
+
+ 
+  
+
