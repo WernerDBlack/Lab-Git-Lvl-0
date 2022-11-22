@@ -12,18 +12,21 @@ jobs:
     permissions: write-all
     name: new job
     runs-on: ubuntu-latest
-      # node-version:14.x
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3.5.1
         with:
           node-version: 16
       - run: npm ci
       - name: Run test
-        uses: willcaul/jest-github-action@v2
+        run: npm test ./test/step1/step1.test.js
+       # uses: willcaul/jest-github-action@v2
+       # with:
+       #   working-directory : "test/step1"
+       #   coverage-comment: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Success Issue

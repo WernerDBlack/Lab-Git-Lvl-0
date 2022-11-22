@@ -18,12 +18,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3.5.1
         with:
           node-version: 16
       - run: npm ci
       - name: Run test
-        uses: willcaul/jest-github-action@v2
+        run: npm test ./test/step2/step2.test.js
+       # uses: willcaul/jest-github-action@v2
+       # with:
+       #   working-directory : "test/step2"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Success Issue
