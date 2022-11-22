@@ -24,6 +24,8 @@ jobs:
       - run: npm ci
       - name: Run test
         uses: willcaul/jest-github-action@v2
+        with:
+          working-directory : "test/step2"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Success Issue
